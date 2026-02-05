@@ -339,7 +339,7 @@ in
             --mem=${builtins.toString cfg.memory} \
             --net:service=${utils.escapeSystemdExecArg cfg.unikernelInterface} \
             -- \
-            ${cfg.package}/dnsvizor.hvt \
+            ${cfg.package}/lib/dnsvizor.hvt \
             ${utils.escapeSystemdExecArgs (lib.cli.toCommandLineGNU { } cfg.settings)}
         '';
         Restart = "on-failure";
